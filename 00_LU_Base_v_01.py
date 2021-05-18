@@ -113,6 +113,6 @@ while play_again == "":
     
 
 print()
-print("Final Balance", balance)
+print("Final Balance $", balance)
 
 

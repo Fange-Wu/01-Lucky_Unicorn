@@ -1,26 +1,10 @@
-import random
+greeting = "hello world"
+sides = "*" * 3
 
+greeting = "{} {} {}".format(sides, greeting, sides)
 
-# main routine goes here
-tokens = ["unicorn", "horse", "horse", "horse","zebra", "zebra", "zebra", "donkey", "donkey", "donkey"]
-STARTING_BALANCE = 100
+top_bottom = "*" * len(greeting)
 
-balance = STARTING_BALANCE
-
-
-# Testing loop to genereate 20 tokens
-for item in range (0,100) :
-    chosen = random.choice(tokens)
-
-    # Adjust balance
-    if chosen == "unicorn":
-        balance += 4
-    elif chosen == "donkey":
-        balance -= 1
-    else:
-        balance -= 0.5
-
-    
-print()
-print("Starting Balance: ${:.2f}" .format(STARTING_BALANCE))
-print("Final Balance: ${:.2f}" .format(balance))
+print(top_bottom)
+print(greeting)
+print(top_bottom)
