@@ -27,7 +27,6 @@ def instructions () :
     print()
     print("Choose a starting amount (minimum $1, maximum $10). \n \n Then press <enter> to play. You will get either a horse, a zebra, a donkey or a unicorn. \n \n It costs a $1 per round. Depending on your prize you might win some of the money back. Here's the payout amounts... \n Unicorn: $5.00 (balance increase by $4) \n Horse: $0.50 (balance decreases by $0.50) \n Zebra: $0.50 (balance decrease by $0.50) \n Donkey: $0.00 (balance decrease by $1.00) \n \n (type <xxx> to quit)")
     print()
-    statement_generator("Let's get Started...", "-")
     return ""
 
 
@@ -73,7 +72,7 @@ show_instructions = yes_no("Have you played the game before? ")
 
 if show_instructions == "no":
     instructions()
-
+statement_generator("Let's get Started...", "-")
 print()
 
 # Ask user how much they want to play with
@@ -91,8 +90,8 @@ while play_again == "":
 
     # Print round number 
     print()
-    print("*** Round #{} ***".format(rounds_played))
-   
+    statement_generator("Round #{}".format(rounds_played), ".")
+    print()
     chosen_num = random.randint(1, 100)
 
     # Adjust balance
